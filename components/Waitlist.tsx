@@ -4,6 +4,27 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Loader2, Check } from 'lucide-react'
 
+const DISPOSABLE_DOMAINS = new Set([
+  'mailinator.com', 'guerrillamail.com', 'guerrillamail.net', 'guerrillamail.org',
+  'guerrillamail.biz', 'guerrillamail.de', 'guerrillamail.info', 'grr.la',
+  'sharklasers.com', 'spam4.me', 'trashmail.com', 'trashmail.me', 'trashmail.net',
+  'trashmail.at', 'trashmail.io', 'dispostable.com', 'maildrop.cc', 'mailnull.com',
+  'spamgourmet.com', 'yopmail.com', 'yopmail.fr', 'cool.fr.nf', 'jetable.fr.nf',
+  'nospam.ze.tc', 'nomail.xl.cx', 'mega.zik.dj', 'speed.1s.fr', 'courriel.fr.nf',
+  'moncourrier.fr.nf', 'monemail.fr.nf', 'monmail.fr.nf', 'tempmail.com',
+  'temp-mail.org', 'tempinbox.com', 'throwaway.email', 'throwam.com',
+  'emailondeck.com', 'getairmail.com', 'mailnesia.com', 'mytrashmail.com',
+  'spambox.us', 'discard.email', 'fake-box.com', 'filzmail.com', 'spamfree24.org',
+  'mailnull.com', 'spamgourmet.net', 'spamgourmet.org', '10minutemail.com',
+  '10minutemail.net', 'tempr.email', 'burnermail.io', 'getnada.com',
+  'inboxbear.com', 'tempail.com', 'spamgrap.com', 'trashmail.live',
+])
+
+function isDisposable(email: string): boolean {
+  const domain = email.split('@')[1]?.toLowerCase()
+  return domain ? DISPOSABLE_DOMAINS.has(domain) : false
+}
+
 export default function Waitlist() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'done'>('idle')
@@ -11,11 +32,52 @@ export default function Waitlist() {
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email.includes('@') || !email.includes('.')) { setError('Enter a valid email.'); return }
+
+    if (!email.includes('@') || !email.includes('.')) {
+      setError('Enter a valid email.')
+      return
+    }
+
+    if (isDisposable(email)) {
+      setError('Please use a real email address.')
+      return
+    }
+
     setError('')
     setStatus('loading')
-    await new Promise(r => setTimeout(r, 1100))
-    setStatus('done')
+
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/waitlist`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+            'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
+            'Prefer': 'return=minimal',
+          },
+          body: JSON.stringify({ email }),
+        }
+      )
+
+      if (res.status === 409) {
+        setError('This email is already on the waitlist.')
+        setStatus('idle')
+        return
+      }
+
+      if (!res.ok) {
+        setError('Something went wrong. Please try again.')
+        setStatus('idle')
+        return
+      }
+
+      setStatus('done')
+    } catch {
+      setError('Something went wrong. Please try again.')
+      setStatus('idle')
+    }
   }
 
   return (
@@ -49,7 +111,7 @@ export default function Waitlist() {
             <span className="text-gradient">Train Smarter.</span>
           </h2>
 
-          <p className="font-body text-zinc-400 text-base leading-relaxed mb-12 max-w-md mx-auto">
+          <p className="font-body text-zinc-300 text-base leading-relaxed mb-12 max-w-md mx-auto">
             VitLoop launches in 2026. Join the waitlist for early access, founding member pricing, and zero spam.
           </p>
 
@@ -66,9 +128,9 @@ export default function Waitlist() {
                   style={{ background: 'rgba(0,255,135,0.1)', border: '1px solid rgba(0,255,135,0.25)' }}>
                   <Check size={28} className="text-[#00FF87]" />
                 </div>
-                <p className="font-display font-bold text-xl text-white">You're in.</p>
+                <p className="font-display font-bold text-xl text-white">You&apos;re in.</p>
                 <p className="font-body text-zinc-300 text-sm">
-                  We'll reach you at <span className="text-[#00FF87]">{email}</span>
+                  We&apos;ll reach you at <span className="text-[#00FF87]">{email}</span>
                 </p>
               </motion.div>
             ) : (
@@ -80,7 +142,7 @@ export default function Waitlist() {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="w-full px-5 py-3.5 rounded-full font-body text-sm text-white placeholder-zinc-600 focus:outline-none transition-all"
+                    className="w-full px-5 py-3.5 rounded-full font-body text-sm text-white placeholder-zinc-500 focus:outline-none transition-all"
                     style={{
                       background: 'rgba(255,255,255,0.04)',
                       border: '1px solid rgba(255,255,255,0.1)',
