@@ -72,7 +72,7 @@ function SpotCard({ s, i }: { s: typeof steps[0], i: number }) {
           </div>
 
           <h3 className="font-display font-bold text-xl text-white mb-3">{s.title}</h3>
-          <p className="font-body text-sm text-zinc-500 leading-relaxed flex-1">{s.body}</p>
+          <p className="font-body text-sm text-zinc-300 leading-relaxed flex-1">{s.body}</p>
 
           {/* Bottom accent */}
           <div className="mt-6 h-px w-12 rounded-full" style={{ background: s.color, opacity: 0.4 }} />
@@ -102,7 +102,7 @@ export default function HowItWorks() {
               Three steps to a<br />
               <span className="text-gradient">smarter body</span>
             </h2>
-            <p className="font-body text-zinc-500 max-w-xs text-sm leading-relaxed lg:text-right">
+            <p className="font-body text-zinc-300 max-w-xs text-sm leading-relaxed lg:text-right">
               No spreadsheets. No guesswork.<br />Just point, plan, and perform.
             </p>
           </div>

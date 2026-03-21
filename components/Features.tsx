@@ -111,7 +111,7 @@ export default function Features() {
                     { icon: <RefreshCw size={16} />, label: 'Loop', divider: false },
                   ].map((x, i) =>
                     x.divider ? (
-                      <span key={i} className="text-zinc-700 text-sm">{x.icon}</span>
+                      <span key={i} className="text-zinc-400 text-sm">{x.icon}</span>
                     ) : (
                       <div key={i} className="flex flex-col items-center gap-1">
                         <div
@@ -120,7 +120,7 @@ export default function Features() {
                         >
                           {x.icon}
                         </div>
-                        <span className="font-mono-vl text-[8px] text-zinc-600 tracking-wider whitespace-nowrap">
+                        <span className="font-mono-vl text-[8px] text-zinc-400 tracking-wider whitespace-nowrap">
                           {x.label}
                         </span>
                       </div>
@@ -150,7 +150,7 @@ export default function Features() {
                   </span>
                 </div>
                 <h3 className="font-display font-bold text-white text-lg mb-2">Food Photo Recognition</h3>
-                <p className="font-body text-zinc-500 text-xs leading-relaxed flex-1">
+                <p className="font-body text-zinc-300 text-xs leading-relaxed flex-1">
                   Point. Snap. Done. Instant calories and macros for any meal, anywhere in the world.
                 </p>
                 <div className="mt-4 flex items-center gap-2">
@@ -185,14 +185,14 @@ export default function Features() {
                   </span>
                 </div>
                 <h3 className="font-display font-bold text-white text-lg mb-2">AI Workout Planner</h3>
-                <p className="font-body text-zinc-500 text-xs leading-relaxed flex-1">
+                <p className="font-body text-zinc-300 text-xs leading-relaxed flex-1">
                   Built from your body stats, goals, medical history, and today&apos;s food intake. Adapts every single day.
                 </p>
                 <div className="mt-4 flex gap-2 flex-wrap">
                   {['Home', 'Gym', 'PCOS', 'Diabetes', 'Recovery'].map((t) => (
                     <span
                       key={t}
-                      className="font-mono-vl text-[8px] tracking-wider px-2 py-0.5 rounded-full text-zinc-500"
+                      className="font-mono-vl text-[8px] tracking-wider px-2 py-0.5 rounded-full text-zinc-300"
                       style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}
                     >
                       {t}
@@ -222,7 +222,7 @@ export default function Features() {
                   </span>
                 </div>
                 <h3 className="font-display font-bold text-white text-lg mb-2">Live Form Correction</h3>
-                <p className="font-body text-zinc-500 text-xs leading-relaxed flex-1">
+                <p className="font-body text-zinc-300 text-xs leading-relaxed flex-1">
                   Your phone camera watches you work out. Pose AI catches bad form before injury happens and counts every rep.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
@@ -243,7 +243,7 @@ export default function Features() {
           >
             <div className="grad-border-subtle h-full">
               <Spot className="h-full rounded-[17px] bg-[#0c0c10] p-6 flex flex-col min-h-[160px]">
-                <p className="font-mono-vl text-[9px] tracking-widest text-zinc-600 mb-5">MARKET OPPORTUNITY</p>
+                <p className="font-mono-vl text-[9px] tracking-widest text-zinc-400 mb-5">MARKET OPPORTUNITY</p>
                 <div className="grid grid-cols-2 gap-4 flex-1">
                   {[
                     { v: '$45B+', l: 'Market by 2035', c: '#00FF87' },
@@ -255,7 +255,7 @@ export default function Features() {
                       <p className="font-display font-extrabold text-2xl" style={{ color: c }}>
                         {v}
                       </p>
-                      <p className="font-body text-[10px] text-zinc-600 mt-0.5 leading-snug">{l}</p>
+                      <p className="font-body text-[10px] text-zinc-400 mt-0.5 leading-snug">{l}</p>
                     </div>
                   ))}
                 </div>

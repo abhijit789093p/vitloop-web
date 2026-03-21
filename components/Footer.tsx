@@ -56,14 +56,14 @@ export default function Footer() {
                 Vit<span style={{ color: '#00FF87' }}>Loop</span>
               </span>
             </a>
-            <p className="font-body text-xs text-zinc-600 leading-relaxed max-w-[220px] mb-6">
+            <p className="font-body text-xs text-zinc-400 leading-relaxed max-w-[220px] mb-6">
               Eat Smart. Move Better. Loop.<br />
               The AI coach that connects what you eat to how you train.
             </p>
             <div className="flex items-center gap-2">
               {socials.map(s => (
                 <a key={s.name} href={s.href} aria-label={s.name}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-600 hover:text-[#00FF87] transition-colors"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-400 hover:text-[#00FF87] transition-colors"
                   style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
                   {s.icon}
                 </a>
@@ -78,11 +78,11 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.08 }}
           >
-            <p className="font-mono-vl text-[10px] tracking-widest text-zinc-600 uppercase mb-5">Navigation</p>
+            <p className="font-mono-vl text-[10px] tracking-widest text-zinc-400 uppercase mb-5">Navigation</p>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5">
               {links.map(([label, href]) => (
                 <li key={label}>
-                  <a href={href} className="font-body text-xs text-zinc-500 hover:text-[#00FF87] transition-colors">
+                  <a href={href} className="font-body text-xs text-zinc-300 hover:text-[#00FF87] transition-colors">
                     {label}
                   </a>
                 </li>
@@ -97,7 +97,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.14 }}
           >
-            <p className="font-mono-vl text-[10px] tracking-widest text-zinc-600 uppercase mb-5">Get The App</p>
+            <p className="font-mono-vl text-[10px] tracking-widest text-zinc-400 uppercase mb-5">Get The App</p>
             <div className="flex flex-col gap-3">
               {[
                 { store: 'App Store', sub: 'iOS · Coming 2026' },
@@ -106,8 +106,8 @@ export default function Footer() {
                 <a key={store} href="#waitlist"
                   className="flex items-center gap-3 px-4 py-3 rounded-xl hover:border-[#00FF87]/20 transition-all group"
                   style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <span className="font-body text-xs text-zinc-500 group-hover:text-zinc-300 transition-colors">{store}</span>
-                  <span className="font-mono-vl text-[9px] text-zinc-700 ml-auto tracking-wider">{sub}</span>
+                  <span className="font-body text-xs text-zinc-300 group-hover:text-zinc-300 transition-colors">{store}</span>
+                  <span className="font-mono-vl text-[9px] text-zinc-500 ml-auto tracking-wider">{sub}</span>
                 </a>
               ))}
             </div>
@@ -116,10 +116,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-6 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-mono-vl text-[10px] tracking-wider text-zinc-700">© 2026 VITLOOP · ALL RIGHTS RESERVED</p>
+          <p className="font-mono-vl text-[10px] tracking-wider text-zinc-500">© 2026 VITLOOP · ALL RIGHTS RESERVED</p>
           <div className="flex items-center gap-1.5">
             <div className="w-1.5 h-1.5 rounded-full bg-[#00FF87]" style={{ animation: 'pulse 2s ease-in-out infinite' }} />
-            <span className="font-mono-vl text-[10px] tracking-wider text-zinc-700">LAUNCHING 2026</span>
+            <span className="font-mono-vl text-[10px] tracking-wider text-zinc-500">LAUNCHING 2026</span>
           </div>
         </div>
       </div>

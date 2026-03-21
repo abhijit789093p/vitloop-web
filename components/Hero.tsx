@@ -226,7 +226,7 @@ export default function Hero() {
               <div>
                 <p className="text-sm font-body">
                   <span className="text-white font-semibold">2,847+</span>
-                  <span className="text-zinc-500"> people on the waitlist</span>
+                  <span className="text-zinc-300"> people on the waitlist</span>
                 </p>
                 <div className="flex gap-0.5 mt-0.5">
                   {[...Array(5)].map((_, i) => (
@@ -234,7 +234,7 @@ export default function Hero() {
                       <path d="M6 0l1.5 4.5H12L8.25 7.5 9.75 12 6 9 2.25 12l1.5-4.5L0 4.5h4.5z"/>
                     </svg>
                   ))}
-                  <span className="text-[10px] text-zinc-500 ml-1 font-body">4.9/5 anticipated</span>
+                  <span className="text-[10px] text-zinc-300 ml-1 font-body">4.9/5 anticipated</span>
                 </div>
               </div>
             </motion.div>
@@ -323,7 +323,7 @@ export default function Hero() {
                   <div className="text-[#22d3ee]"><Droplets size={15} /></div>
                   <div>
                     <p className="font-display font-bold text-white text-xs">Hydration</p>
-                    <p className="font-body text-[10px] text-zinc-500">Drink 500ml before workout</p>
+                    <p className="font-body text-[10px] text-zinc-300">Drink 500ml before workout</p>
                   </div>
                 </div>
               </motion.div>
@@ -345,7 +345,7 @@ export default function Hero() {
                   <div className="text-[#a78bfa]"><Beef size={15} /></div>
                   <div>
                     <p className="font-display font-bold text-white text-xs">Protein goal</p>
-                    <p className="font-body text-[10px] text-zinc-500">Need 42g more today</p>
+                    <p className="font-body text-[10px] text-zinc-300">Need 42g more today</p>
                   </div>
                 </div>
               </motion.div>
@@ -369,7 +369,7 @@ export default function Hero() {
           ].map(({ value, label }) => (
             <div key={label} className="text-center lg:text-left">
               <p className="font-display font-extrabold text-2xl text-white mb-1">{value}</p>
-              <p className="font-body text-xs text-zinc-500 leading-snug">{label}</p>
+              <p className="font-body text-xs text-zinc-300 leading-snug">{label}</p>
             </div>
           ))}
         </motion.div>

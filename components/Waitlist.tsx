@@ -67,7 +67,7 @@ export default function Waitlist() {
                   <Check size={28} className="text-[#00FF87]" />
                 </div>
                 <p className="font-display font-bold text-xl text-white">You're in.</p>
-                <p className="font-body text-zinc-500 text-sm">
+                <p className="font-body text-zinc-300 text-sm">
                   We'll reach you at <span className="text-[#00FF87]">{email}</span>
                 </p>
               </motion.div>
@@ -109,13 +109,13 @@ export default function Waitlist() {
             ].map(p => (
               <div key={p} className="flex items-center gap-2">
                 <Check size={12} className="text-[#00FF87]" />
-                <span className="font-body text-xs text-zinc-500">{p}</span>
+                <span className="font-body text-xs text-zinc-300">{p}</span>
               </div>
             ))}
           </div>
 
           {/* Counter */}
-          <p className="mt-6 font-mono-vl text-[11px] tracking-widest text-zinc-700">
+          <p className="mt-6 font-mono-vl text-[11px] tracking-widest text-zinc-500">
             2,847 ALREADY WAITING
           </p>
         </motion.div>
