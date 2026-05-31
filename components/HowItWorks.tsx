@@ -9,7 +9,7 @@ const steps = [
     n: '01',
     Icon: Camera,
     title: 'Snap Your Food',
-    body: 'Point your camera at any meal. VitLoop AI identifies every ingredient and returns precise calories and macros in under 2 seconds — for any cuisine on earth.',
+    body: 'Point your camera at any meal. VitLoop AI identifies every ingredient and returns precise calories and macros instantly — for any cuisine on earth.',
     color: '#00FF87',
     tag: 'Computer Vision',
   },

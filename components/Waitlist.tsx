@@ -178,7 +178,7 @@ export default function Waitlist() {
 
           {/* Counter */}
           <p className="mt-6 font-mono-vl text-[11px] tracking-widest text-zinc-500">
-            2,847 ALREADY WAITING
+            BE AMONG THE FIRST
           </p>
         </motion.div>
       </div>
