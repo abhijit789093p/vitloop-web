@@ -24,10 +24,10 @@ const steps = [
   {
     n: '03',
     Icon: Activity,
-    title: 'Work Out Smarter',
-    body: 'Train with your phone watching you. Pose estimation AI counts reps, corrects form live, and adjusts intensity — like a personal trainer in your pocket.',
+    title: 'Mira Coaches You',
+    body: 'Ask your AI coach anything, anytime. Mira knows your full day — every meal, every exercise, your water, sleep, and habits — and gives you real, contextual guidance.',
     color: '#a78bfa',
-    tag: 'Pose Estimation AI',
+    tag: 'AI Coaching',
   },
 ]
 

@@ -90,7 +90,7 @@ function PhoneUI() {
             <div className="absolute bottom-3 left-3 flex items-center gap-1.5 px-2 py-1 rounded-full"
               style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(8px)', border: '1px solid rgba(0,255,135,0.2)' }}>
               <div className="w-1 h-1 rounded-full bg-[#00FF87]" />
-              <span className="font-mono-vl text-[9px] text-[#00FF87]">97% CONFIDENCE</span>
+              <span className="font-mono-vl text-[9px] text-[#00FF87]">AI DETECTED</span>
             </div>
           </div>
 
@@ -193,8 +193,8 @@ export default function Hero() {
             <motion.p variants={item}
               className="text-zinc-400 font-body leading-relaxed mb-10 max-w-[400px]"
               style={{ fontSize: 16 }}>
-              Snap your meal. Your AI reads calories, adjusts your workout instantly.{' '}
-              <span className="text-zinc-200">One loop. One coach. Zero guesswork.</span>
+              Tired of apps that forget what you ate?{' '}
+              <span className="text-zinc-200">VitLoop connects every meal to every workout — automatically. One coach. Zero guesswork.</span>
             </motion.p>
 
             {/* CTA row */}
@@ -225,17 +225,10 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-sm font-body">
-                  <span className="text-white font-semibold">2,847+</span>
-                  <span className="text-zinc-300"> people on the waitlist</span>
+                  <span className="text-white font-semibold">Early access</span>
+                  <span className="text-zinc-300"> — join the waitlist now</span>
                 </p>
-                <div className="flex gap-0.5 mt-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} width="10" height="10" viewBox="0 0 12 12" fill="#f59e0b">
-                      <path d="M6 0l1.5 4.5H12L8.25 7.5 9.75 12 6 9 2.25 12l1.5-4.5L0 4.5h4.5z"/>
-                    </svg>
-                  ))}
-                  <span className="text-[10px] text-zinc-300 ml-1 font-body">4.9/5 anticipated</span>
-                </div>
+                <p className="text-[10px] text-zinc-400 mt-0.5 font-body">Be among the first to try VitLoop</p>
               </div>
             </motion.div>
 
@@ -363,8 +356,8 @@ export default function Hero() {
         >
           {[
             { value: '$45B+', label: 'Fitness app market by 2035' },
-            { value: '<2s', label: 'Food recognition speed' },
-            { value: '100+', label: 'Global cuisines supported' },
+            { value: 'Real-time', label: 'Food recognition speed' },
+            { value: 'Any meal', label: 'Cuisine, anywhere in the world' },
             { value: '4-in-1', label: 'AI systems in one app' },
           ].map(({ value, label }) => (
             <div key={label} className="text-center lg:text-left">

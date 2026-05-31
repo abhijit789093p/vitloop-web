@@ -8,7 +8,7 @@ type Val = true | false | 'partial'
 const rows: { feature: string; icon: string; vl: Val; hm: Val; mfp: Val; fb: Val }[] = [
   { feature: 'Food Photo → Calories',         icon: '📸', vl: true,      hm: true,      mfp: true,      fb: false },
   { feature: 'AI Workout Planning',            icon: '🧠', vl: true,      hm: 'partial', mfp: false,     fb: true  },
-  { feature: 'Live Form Correction',           icon: '🎯', vl: true,      hm: false,     mfp: false,     fb: false },
+  { feature: 'Live Form Correction',           icon: '🎯', vl: 'partial', hm: false,     mfp: false,     fb: false },
   { feature: 'Closed-Loop AI (Meal→Workout)',  icon: '🔁', vl: true,      hm: false,     mfp: false,     fb: false },
   { feature: 'Medical Condition Support',      icon: '🩺', vl: true,      hm: 'partial', mfp: false,     fb: false },
   { feature: 'Real-time Plan Adjustments',     icon: '⚡', vl: true,      hm: false,     mfp: false,     fb: false },
@@ -166,7 +166,7 @@ export default function WhyVitLoop() {
                     <span className="font-mono-vl text-[9px] tracking-widest text-zinc-400 uppercase">Score</span>
                   </div>
                   <div className="px-4 py-4 text-center" style={{ background: 'rgba(0,255,135,0.04)' }}>
-                    <span className="font-display font-extrabold text-base text-[#00FF87]">7 / 7</span>
+                    <span className="font-display font-extrabold text-base text-[#00FF87]">6 / 7</span>
                   </div>
                   {[
                     { score: '3 / 7', color: '#f97316' },

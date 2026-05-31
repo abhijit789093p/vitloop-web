@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
-import { Camera, Brain, Dumbbell, RefreshCw } from 'lucide-react'
+import { Camera, Brain, Dumbbell, RefreshCw, CheckSquare } from 'lucide-react'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Spot({ children, className }: { children: any; className?: string }) {
@@ -160,7 +160,7 @@ export default function Features() {
                       style={{ background: 'linear-gradient(90deg, #22d3ee, #00FF87)' }}
                     />
                   </div>
-                  <span className="font-mono-vl text-[9px] text-[#22d3ee]">97% accuracy</span>
+                  <span className="font-mono-vl text-[9px] text-[#22d3ee]">AI-powered accuracy</span>
                 </div>
               </Spot>
             </div>
@@ -203,7 +203,7 @@ export default function Features() {
             </div>
           </motion.div>
 
-          {/* Form Correction */}
+          {/* Form Correction — Coming Soon */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -218,22 +218,22 @@ export default function Features() {
                     className="font-mono-vl text-[9px] tracking-widest text-[#f59e0b] px-2.5 py-1 rounded-full"
                     style={{ background: 'rgba(245,158,11,0.07)', border: '1px solid rgba(245,158,11,0.15)' }}
                   >
-                    CAMERA AI
+                    COMING SOON
                   </span>
                 </div>
                 <h3 className="font-display font-bold text-white text-lg mb-2">Live Form Correction</h3>
                 <p className="font-body text-zinc-300 text-xs leading-relaxed flex-1">
-                  Your phone camera watches you work out. Pose AI catches bad form before injury happens and counts every rep.
+                  Your phone camera will watch you work out. Pose AI will catch bad form before injury happens and count every rep automatically.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse" />
-                  <span className="font-mono-vl text-[9px] text-[#f59e0b]">LIVE &middot; 30fps detection</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+                  <span className="font-mono-vl text-[9px] text-[#f59e0b]">IN DEVELOPMENT &middot; v2</span>
                 </div>
               </Spot>
             </div>
           </motion.div>
 
-          {/* Stats */}
+          {/* Habit Tracker */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -243,19 +243,23 @@ export default function Features() {
           >
             <div className="grad-border-subtle h-full">
               <Spot className="h-full rounded-[17px] bg-[#0c0c10] p-6 flex flex-col min-h-[160px]">
-                <p className="font-mono-vl text-[9px] tracking-widest text-zinc-400 mb-5">MARKET OPPORTUNITY</p>
-                <div className="grid grid-cols-2 gap-4 flex-1">
-                  {[
-                    { v: '$45B+', l: 'Market by 2035', c: '#00FF87' },
-                    { v: '14%', l: 'Annual growth', c: '#22d3ee' },
-                    { v: '200M+', l: 'Fitness app users', c: '#a78bfa' },
-                    { v: '2,847', l: 'Waitlist members', c: '#f59e0b' },
-                  ].map(({ v, l, c }) => (
-                    <div key={l}>
-                      <p className="font-display font-extrabold text-2xl" style={{ color: c }}>
-                        {v}
-                      </p>
-                      <p className="font-body text-[10px] text-zinc-400 mt-0.5 leading-snug">{l}</p>
+                <div className="flex items-start justify-between mb-4">
+                  <span
+                    className="font-mono-vl text-[9px] tracking-widest text-[#00FF87] px-2.5 py-1 rounded-full"
+                    style={{ background: 'rgba(0,255,135,0.07)', border: '1px solid rgba(0,255,135,0.15)' }}
+                  >
+                    DAILY HABITS
+                  </span>
+                </div>
+                <h3 className="font-display font-bold text-white text-lg mb-2">Habit Scheduler</h3>
+                <p className="font-body text-zinc-300 text-xs leading-relaxed flex-1">
+                  Build the life, not just the body. Track workouts, sleep, water, and custom habits — streaks keep you accountable every day.
+                </p>
+                <div className="mt-4 flex items-center gap-3 flex-wrap">
+                  {['No alcohol', 'Early sleep', 'No junk food', 'Workout'].map((h) => (
+                    <div key={h} className="flex items-center gap-1.5">
+                      <CheckSquare size={11} className="text-[#00FF87]" />
+                      <span className="font-mono-vl text-[8px] text-zinc-400 tracking-wider">{h}</span>
                     </div>
                   ))}
                 </div>
