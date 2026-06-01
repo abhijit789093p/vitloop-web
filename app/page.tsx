@@ -5,6 +5,7 @@ import HowItWorks from '@/components/HowItWorks'
 import Features from '@/components/Features'
 import WhyVitLoop from '@/components/WhyVitLoop'
 import Waitlist from '@/components/Waitlist'
+import Donation from '@/components/Donation'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Features />
       <WhyVitLoop />
       <Waitlist />
+      <Donation />
       <Footer />
     </main>
   )
