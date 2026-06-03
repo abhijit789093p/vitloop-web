@@ -48,10 +48,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <a href="#" className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 rounded-xl flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, #00FF87, #22d3ee)' }}>
-                <span className="font-display font-black text-[11px] text-black">VL</span>
-              </div>
+              <img src="/vl-icon.png" alt="VitLoop" className="w-8 h-8 rounded-xl" />
               <span className="font-display font-bold text-base text-white">
                 Vit<span style={{ color: '#00FF87' }}>Loop</span>
               </span>

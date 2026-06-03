@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Heart, Zap, Star, Coffee } from 'lucide-react'
 
-const RAZORPAY_LINK = 'https://rzp.io/rzp/hoNhNnuE'
+const RAZORPAY_LINK = 'https://rzp.io/rzp/SnCyzeh'
 
 const perks = [
   { icon: <Star size={14} />,   label: 'Founding Supporter badge' },

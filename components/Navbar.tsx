@@ -34,19 +34,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center bg-[#060608]" style={{ border: '1px solid rgba(0,255,135,0.15)' }}>
-            <svg width="16" height="16" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="nl" x1="100" y1="5" x2="100" y2="195" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#00FF87"/>
-                  <stop offset="1" stopColor="#22d3ee"/>
-                </linearGradient>
-              </defs>
-              <polygon points="39.2,5 69,5 111.7,169.4 81.9,169.4" fill="url(#nl)"/>
-              <polygon points="146,5 175.8,5 133.1,169.4 103.2,169.4" fill="url(#nl)"/>
-              <polygon points="24.2,169.4 81.9,169.4 81.9,195 24.2,195" fill="url(#nl)"/>
-            </svg>
-          </div>
+          <img src="/vl-icon.png" alt="VitLoop" className="w-8 h-8 rounded-xl" />
           <span className="font-display font-bold text-[15px] tracking-tight text-white">
             Vit<span style={{ color: '#00FF87' }}>Loop</span>
           </span>
